@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InputCM } from '../models/input-cm';
 
 @Component({
   selector: 'app-table-hot',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-hot.component.css']
 })
 export class TableHotComponent implements OnInit {
+
+  inputCm!: InputCM;
 
   typesOfShoes = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
   messages = [
@@ -57,6 +60,96 @@ export class TableHotComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const json = `{
+      "data": [
+        {
+          "id": "620643e45add3d00013c0dcc",
+          "key": "Sta",
+          "label": "Sta",
+          "widget": "Combo",
+          "service": "FSP",
+          "rolld": "",
+          "order": 7,
+          "isAdvanced": [],
+          "keyCombo": [],
+          "labelCombo": []
+        },
+        {
+          "id": "620643e45add3d00013c0dc4",
+          "key": "size",
+          "label": "size",
+          "widget": "Text",
+          "service": "FSP",
+          "rolld": "",
+          "order": 3,
+          "isAdvanced": [],
+          "keyCombo": [],
+          "labelCombo": []
+        },
+        {
+          "id": "620643e45add3d00013c0dca",
+          "key": "reqTy",
+          "label": "reqTy",
+          "widget": "Combo",
+          "service": "FSP",
+          "rolld": "",
+          "order": 6,
+          "isAdvanced": [],
+          "keyCombo": [],
+          "labelCombo": []
+        },
+        {
+          "id": "620643e45add3d00013c0dce",
+          "key": "id",
+          "label": "id",
+          "widget": "Text",
+          "service": "FSP",
+          "rolld": "",
+          "order": 8,
+          "isAdvanced": [],
+          "keyCombo": [],
+          "labelCombo": []
+        },
+        {
+          "id": "620643e45add3d00013c0dc8",
+          "key": "fileName",
+          "label": "fileName",
+          "widget": "Text",
+          "service": "FSP",
+          "rolld": "",
+          "order": 5,
+          "isAdvanced": [],
+          "keyCombo": [],
+          "labelCombo": []
+        },
+        {
+          "id": "620643e45add3d00013c0dc2",
+          "key": "creationDate",
+          "label": "creationDate",
+          "widget": "Text",
+          "service": "FSP",
+          "rolld": "",
+          "order": 2,
+          "isAdvanced": [],
+          "keyCombo": [],
+          "labelCombo": []
+        },
+        {
+          "success": true,
+          "errors": [],
+          "lastUpdate": "2023-04-27 12:13:18.000344",
+          "pagination": {
+            "currentPage": 0,
+            "totalltems": 8,
+            "totalPages": 1,
+            "pageSize": 10000
+          }
+        }
+      ]
+    }`;
+    
+    this.inputCm = JSON.parse(json)
+    debugger;
   }
 
 }
