@@ -40,3 +40,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#cache
+.angular/cache/**
+.angular/cache/14.0.7/babel-webpack/0a77937af3f37336b10f93524e8736ee.json
