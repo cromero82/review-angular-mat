@@ -8,7 +8,7 @@ import { InputCM } from '../models/input-cm';
 })
 export class TableHotComponent implements OnInit {
 
-  inputCm!: InputCM;
+  inputFormsBasic!: InputCM;
 
   typesOfShoes = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
   messages = [
@@ -148,8 +148,7 @@ export class TableHotComponent implements OnInit {
       ]
     }`;
     
-    this.inputCm = JSON.parse(json)
-    debugger;
+    this.inputFormsBasic = JSON.parse(json)
   }
 
 }
